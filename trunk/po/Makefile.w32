@@ -5,7 +5,7 @@ LANGUAGES = \
 MOFILES = \
 		ja.mo
 
-PACKAGE = gtktwitter
+PACKAGE = gtkmogo2
 
 # Correct the following line for the installation directory of gettext
 
@@ -32,7 +32,7 @@ INSTALLDIR = $(LOCALE_DIR)/$(LANGUAGE)/LC_MESSAGES
 all: $(MOFILES)
 
 pot:
-	$(XGETTEXT) --language=C --default-domain=$(PACKAGE) --add-comments --keyword=_ --keyword=N_ ../gtktwitter.c -o gtktwitter.pot
+	$(XGETTEXT) --language=C --default-domain=$(PACKAGE) --add-comments --keyword=_ --keyword=N_ ../gtkmogo2.c -o gtkmogo2.pot
 
 $(LANGUAGES):
 	$(CP) $@.po $@.po.orig
