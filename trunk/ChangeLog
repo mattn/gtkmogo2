@@ -1,20 +1,2 @@
-* version 0.0.6
-	supported load/save configs.
-* version 0.0.5
-	supported ETag and If-Modified-Since.
-	make tiny url with tinyurl.com.
-	add timer for reload.
-	make be possible to browse friends timeline.
-	add tooltips.
-* version 0.0.4
-	anchor for URL links.
-	anchor for @ mark.
-	changing sensitive of buttons.
-* version 0.0.3
-	fixed overflow code.
-	make spec file for rpm.
-* version 0.0.2
-	fixed DATAPATH for windows.
-	reload.png is not found. X-(
-* Fri, 13 Apr 2007
+* Thu, 24 May 2007
 	first release version 0.0.1

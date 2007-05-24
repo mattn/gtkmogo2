@@ -792,7 +792,6 @@ static gpointer update_friends_statuses_thread(gpointer data) {
 				}
 			}
 			status = status->next;
-			printf("%s\n", icon);
 		}
 
 		/**
