@@ -497,7 +497,7 @@ static gpointer process_func(GThreadFunc func, gpointer data, GtkWidget* parent,
 	while(info.processing) {
 		gdk_threads_enter();
 		while(gtk_events_pending())
-			gtk_main_iteration_do(TRUE);
+			gtk_main_iteration_do(FALSE);
 		gdk_threads_leave();
 		g_thread_yield();
 	}
@@ -1256,6 +1256,8 @@ static gboolean textview_event_after(GtkWidget* textview, GdkEvent* ev) {
 	gchar* user_id = NULL;
 	gchar* user_name = NULL;
 
+	if (is_processing) return FALSE;
+
 	if (ev->type != GDK_BUTTON_RELEASE) return FALSE;
 	event = (GdkEventButton*)ev;
 	if (event->button != 1) return FALSE;
@@ -1333,6 +1335,7 @@ static gboolean textview_event_after(GtkWidget* textview, GdkEvent* ev) {
 
 static gboolean textview_motion(GtkWidget* textview, GdkEventMotion* event) {
 	gint x, y;
+	x = y = 0;
 	gtk_text_view_window_to_buffer_coords(
 			GTK_TEXT_VIEW(textview),
 			GTK_TEXT_WINDOW_WIDGET,
@@ -1344,6 +1347,7 @@ static gboolean textview_motion(GtkWidget* textview, GdkEventMotion* event) {
 
 static gboolean textview_visibility(GtkWidget* textview, GdkEventVisibility* event) {
 	gint wx, wy, x, y;
+	wx = wy = x = y = 0;
 	gdk_window_get_pointer(textview->window, &wx, &wy, NULL);
 	gtk_text_view_window_to_buffer_coords(
 			GTK_TEXT_VIEW(textview),
@@ -1356,7 +1360,7 @@ static gboolean textview_visibility(GtkWidget* textview, GdkEventVisibility* eve
 
 static void buffer_delete_range(GtkTextBuffer* buffer, GtkTextIter* start, GtkTextIter* end, gpointer user_data) {
 	GtkTextIter* iter = gtk_text_iter_copy(end);
-	while(TRUE) {
+	while(iter) {
 		GSList* tags = NULL;
 		GtkTextTag* tag;
 		int len, n;
