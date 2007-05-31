@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-24 19:27+0900\n"
+"POT-Creation-Date: 2007-05-31 16:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,57 +16,49 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../gtkmogo2.c:26
-msgid "GtkMogo2"
-msgstr ""
-
-#: ../gtkmogo2.c:27
-msgid "gtkmogo2"
-msgstr ""
-
-#: ../gtkmogo2.c:677
+#: ../gtkmogo2.c:733
 msgid "no server response"
 msgstr ""
 
-#: ../gtkmogo2.c:686 ../gtkmogo2.c:696 ../gtkmogo2.c:719 ../gtkmogo2.c:726
-#: ../gtkmogo2.c:731 ../gtkmogo2.c:967
+#: ../gtkmogo2.c:742 ../gtkmogo2.c:752 ../gtkmogo2.c:775 ../gtkmogo2.c:782
+#: ../gtkmogo2.c:787 ../gtkmogo2.c:1040
 msgid "unknown server response"
 msgstr ""
 
-#: ../gtkmogo2.c:873 ../gtkmogo2.c:1005
+#: ../gtkmogo2.c:943 ../gtkmogo2.c:1078
 msgid "updating statuses..."
 msgstr ""
 
-#: ../gtkmogo2.c:1002
+#: ../gtkmogo2.c:1075
 msgid "posting status..."
 msgstr ""
 
-#: ../gtkmogo2.c:1051
-msgid "GtkMogo2 Login"
+#: ../gtkmogo2.c:1124
+msgid " Login"
 msgstr ""
 
 #. mail
-#: ../gtkmogo2.c:1059
+#: ../gtkmogo2.c:1132
 msgid "_Mail:"
 msgstr ""
 
 #. pass
-#: ../gtkmogo2.c:1078
+#: ../gtkmogo2.c:1151
 msgid "_Password:"
 msgstr ""
 
-#: ../gtkmogo2.c:1510 ../gtkmogo2.c:1511
+#: ../gtkmogo2.c:1587 ../gtkmogo2.c:1588
 msgid "go home"
 msgstr ""
 
-#: ../gtkmogo2.c:1522 ../gtkmogo2.c:1523
+#: ../gtkmogo2.c:1599 ../gtkmogo2.c:1600
 msgid "reload statuses"
 msgstr ""
 
-#: ../gtkmogo2.c:1534 ../gtkmogo2.c:1535
+#: ../gtkmogo2.c:1611 ../gtkmogo2.c:1612
 msgid "post status"
 msgstr ""
 
-#: ../gtkmogo2.c:1546 ../gtkmogo2.c:1547
+#: ../gtkmogo2.c:1623 ../gtkmogo2.c:1624
 msgid "what are you doing?"
 msgstr ""

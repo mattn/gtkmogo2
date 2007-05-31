@@ -23,12 +23,13 @@
 # endif
 #endif
 
-#define APP_TITLE _("GtkMogo2")
-#define APP_NAME _("gtkmogo2")
-#define MOGO2_UPDATE_URL           "http://api.mogo2.jp/statuses/update.xml"
-#define MOGO2_SELF_STATUS_URL      "http://api.mogo2.jp/statuses/friends_timeline.xml"
-#define MOGO2_FRIENDS_STATUS_URL   "http://api.mogo2.jp/statuses/friends_timeline/%s.xml"
-#define MOGO2_THREAD_STATUS_URL    "http://api.mogo2.jp/statuses/thread_timeline/%s.xml"
+#define APP_TITLE                  "GtkMogo2"
+#define APP_NAME                   "gtkmogo2"
+#define SERVICE_NAME               "mogo2"
+#define SERVICE_UPDATE_URL         "http://api.mogo2.jp/statuses/update.xml"
+#define SERVICE_SELF_STATUS_URL    "http://api.mogo2.jp/statuses/friends_timeline.xml"
+#define SERVICE_FRIENDS_STATUS_URL "http://api.mogo2.jp/statuses/friends_timeline/%s.xml"
+#define SERVICE_THREAD_STATUS_URL  "http://api.mogo2.jp/statuses/thread_timeline/%s.xml"
 #define TINYURL_API_URL            "http://tinyurl.com/api-create.php"
 #define ACCEPT_LETTER_URL          "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789;/?:@&=+$,-_.!~*'%"
 #define ACCEPT_LETTER_NAME         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
@@ -695,16 +696,16 @@ static gpointer update_friends_statuses_thread(gpointer data) {
 	user_name = g_object_get_data(G_OBJECT(window), "user_name");
 	status_id = g_object_get_data(G_OBJECT(window), "status_id");
 	if (status_id) {
-		snprintf(url, sizeof(url)-1, MOGO2_THREAD_STATUS_URL, status_id);
+		snprintf(url, sizeof(url)-1, SERVICE_THREAD_STATUS_URL, status_id);
 		/* status_id is temporary value */
 		free(status_id);
 		g_object_set_data(G_OBJECT(window), "status_id", NULL);
 	}
 	else
 	if (user_id)
-		snprintf(url, sizeof(url)-1, MOGO2_FRIENDS_STATUS_URL, user_id);
+		snprintf(url, sizeof(url)-1, SERVICE_FRIENDS_STATUS_URL, user_id);
 	else
-		strncpy(url, MOGO2_SELF_STATUS_URL, sizeof(url)-1);
+		strncpy(url, SERVICE_SELF_STATUS_URL, sizeof(url)-1);
 	memset(auth, 0, sizeof(auth));
 	snprintf(auth, sizeof(auth)-1, "%s:%s", mail, pass);
 
@@ -994,7 +995,7 @@ static gpointer post_status_thread(gpointer data) {
 
 	/* making authenticate info */
 	memset(url, 0, sizeof(url));
-	strncpy(url, MOGO2_UPDATE_URL, sizeof(url)-1);
+	strncpy(url, SERVICE_UPDATE_URL, sizeof(url)-1);
 	sanitized_message = sanitize_message_alloc(message);
 	if (!message) return NULL;
 	message = sanitized_message;
@@ -1120,7 +1121,7 @@ static gboolean login_dialog(GtkWidget* window) {
 			NULL);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 
-	gtk_window_set_title(GTK_WINDOW(dialog), _("GtkMogo2 Login"));
+	gtk_window_set_title(GTK_WINDOW(dialog), _(APP_TITLE" Login"));
 
 	/* layout table */
 	table = gtk_table_new(2, 2, FALSE);
@@ -1528,7 +1529,7 @@ int main(int argc, char* argv[]) {
 	gtk_container_add(GTK_CONTAINER(window), vbox);
 
 	/* title logo */
-	image = gtk_image_new_from_pixbuf(gdk_pixbuf_new_from_file(DATA_DIR"/mogo2.png", NULL));
+	image = gtk_image_new_from_pixbuf(gdk_pixbuf_new_from_file(DATA_DIR"/"SERVICE_NAME".png", NULL));
 	gtk_box_pack_start(GTK_BOX(vbox), image, FALSE, TRUE, 0);
 
 	/* status viewer on scrolled window */
