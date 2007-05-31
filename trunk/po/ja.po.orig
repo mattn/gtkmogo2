@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007 the GtkTwitter's copyright holder
-# This file is distributed under the same license as the GtkTwitter package.
+# Copyright (C) 2007 the GtkMogo2's copyright holder
+# This file is distributed under the same license as the GtkMogo2 package.
 # mattn <mattn.jp at gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-16 20:32+0900\n"
+"POT-Creation-Date: 2007-05-24 19:27+0900\n"
 "PO-Revision-Date: 2007-05-15 20:07+0900\n"
 "Last-Translator: mattn <mattn.jp at gmail.com>\n"
 "Language-Team: mattn <mattn.jp at gmail.com>\n"
@@ -15,57 +15,57 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../gtktwitter.c:26
-msgid "GtkTwitter"
-msgstr "GtkTwitter"
+#: ../gtkmogo2.c:26
+msgid "GtkMogo2"
+msgstr ""
 
-#: ../gtktwitter.c:27
-msgid "gtktwitter"
-msgstr "gtktwitter"
+#: ../gtkmogo2.c:27
+msgid "gtkmogo2"
+msgstr ""
 
-#: ../gtktwitter.c:670
+#: ../gtkmogo2.c:677
 msgid "no server response"
 msgstr "サーバからの応答がありません"
 
-#: ../gtktwitter.c:679 ../gtktwitter.c:689 ../gtktwitter.c:712
-#: ../gtktwitter.c:719 ../gtktwitter.c:724 ../gtktwitter.c:953
+#: ../gtkmogo2.c:686 ../gtkmogo2.c:696 ../gtkmogo2.c:719 ../gtkmogo2.c:726
+#: ../gtkmogo2.c:731 ../gtkmogo2.c:967
 msgid "unknown server response"
 msgstr "サーバからの応答が不正です"
 
-#: ../gtktwitter.c:860 ../gtktwitter.c:991
+#: ../gtkmogo2.c:873 ../gtkmogo2.c:1005
 msgid "updating statuses..."
 msgstr "ステータス更新中..."
 
-#: ../gtktwitter.c:988
+#: ../gtkmogo2.c:1002
 msgid "posting status..."
 msgstr "ステータス送信中..."
 
-#: ../gtktwitter.c:1037
-msgid "GtkTwitter Login"
-msgstr "GtkTwitter ログイン"
+#: ../gtkmogo2.c:1051
+msgid "GtkMogo2 Login"
+msgstr ""
 
 #. mail
-#: ../gtktwitter.c:1045
+#: ../gtkmogo2.c:1059
 msgid "_Mail:"
 msgstr "メール(_M):"
 
 #. pass
-#: ../gtktwitter.c:1064
+#: ../gtkmogo2.c:1078
 msgid "_Password:"
 msgstr "パスワード(_P):"
 
-#: ../gtktwitter.c:1503 ../gtktwitter.c:1504
+#: ../gtkmogo2.c:1510 ../gtkmogo2.c:1511
 msgid "go home"
 msgstr "ホーム"
 
-#: ../gtktwitter.c:1515 ../gtktwitter.c:1516
+#: ../gtkmogo2.c:1522 ../gtkmogo2.c:1523
 msgid "reload statuses"
 msgstr "リロード"
 
-#: ../gtktwitter.c:1527 ../gtktwitter.c:1528
+#: ../gtkmogo2.c:1534 ../gtkmogo2.c:1535
 msgid "post status"
 msgstr "ステータス送信"
 
-#: ../gtktwitter.c:1539 ../gtktwitter.c:1540
+#: ../gtkmogo2.c:1546 ../gtkmogo2.c:1547
 msgid "what are you doing?"
 msgstr "今なにしてる？"
