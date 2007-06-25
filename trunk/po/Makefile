@@ -4,7 +4,7 @@ LANGUAGES = \
 MOFILES = \
 		ja.mo
 
-PACKAGE = gtktwitter
+PACKAGE = gtkmogo2
 SHELL = /bin/sh
 
 # The OLD_PO_FILE_INPUT and OLD_PO_FILE_OUTPUT are for the new GNU gettext
