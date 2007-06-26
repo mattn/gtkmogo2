@@ -2,10 +2,10 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.57)
-AC_INIT(gtkmogo2.c, 0.0.1, mattn.jp@gmail.com)
+AC_INIT(gtkmogo2.c, 0.0.2, mattn.jp@gmail.com)
 AC_CONFIG_SRCDIR([gtkmogo2.c])
 AM_CONFIG_HEADER([config.h])
-AM_INIT_AUTOMAKE(gtkmogo2, 0.0.1, no-define) 
+AM_INIT_AUTOMAKE(gtkmogo2, 0.0.2, no-define) 
 
 # Checks for programs.
 AC_PROG_CC
